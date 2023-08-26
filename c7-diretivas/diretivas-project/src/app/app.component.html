@@ -1,0 +1,15 @@
+<router-outlet></router-outlet>
+<hr>
+<app-card *ngIf="isAliveCard; else anotherBlock"></app-card>
+
+<ng-template #anotherBlock>
+  <p>Olá, sou um bloco secreto!!</p>
+</ng-template>
+
+<hr>
+<app-comp-atributos>
+  <!--Um elemento pai passe algo para o elemento filho-->
+  <h2>Olá, Eu vim de fora</h2>
+  <p>Eu também...</p>
+</app-comp-atributos>
+
