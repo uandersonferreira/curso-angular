@@ -1,7 +1,7 @@
 .card{
   border: 2px solid black;
   width: 240px;
-  height: 350px;
+  height: 420px;
 
   display: flex;
   flex-direction: column;
@@ -20,7 +20,7 @@
 
 .card__title > h3{
   color:  white;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 2px;
 }
 
@@ -53,5 +53,5 @@
   font-weight: bold;
   padding: 5px;
 
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
