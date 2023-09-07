@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* .card{
+    width: 720px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid black;
+ }
+
+
+.card_left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+     
+}
+
+.card_left > a{
+    margin-top: 15px;
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
+    padding-bottom: 5px;
+    font-weight: bolder;
+}
+.card_left > p{
+    color: rgb(71, 71, 71);
+}
+
+.card_right > img{
+    width: 150;
+    height: 150px;
+} */

@@ -1,0 +1,37 @@
+<div>
+  <ul>
+    <h3>[href]</h3>
+    <li><a href="/">Home</a></li>
+    <li><a href="/portifolio">portifolio</a></li>
+    <hr>
+    <h3>[routerLink] </h3>
+    <li>
+      <a
+      [routerLink]="['/',  ]"
+      [routerLinkActive]="['activated']"
+      [routerLinkActiveOptions]="{exact: true}"
+      >
+      HOME
+    </a>
+    </li>
+    <li>
+      <a
+      [routerLink]="['/portifolio']"
+      [routerLinkActive]="['activated']"
+      >
+      <!-- [routerLinkActiveOptions]="{exact: true}" -->
+      PORTIFOLIO
+    </a>
+  </li>
+  </ul>
+</div>
+<p>
+  [routerLink] Navegação sem recarregar a página: O routerLink permite que você navegue entre as rotas do aplicativo sem recarregar toda a página. Isso é essencial em aplicativos de página única (SPA) para uma experiência de usuário mais suave, pois apenas as partes relevantes da página são atualizadas.
+</p>
+
+<!--
+    <li><a href="/">Home</a></li>
+    <li><a href="/portifolio">portifolio</a></li>
+
+
+ -->
