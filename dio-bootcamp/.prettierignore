@@ -1,8 +1,0 @@
-# Generated Files
-**/node_modules/**
-**/dist/**
-**/coverage/**
-
-# Other Extensions
-*.html
-*.md
