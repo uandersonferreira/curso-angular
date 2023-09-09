@@ -60,6 +60,10 @@ TEMPLATE <---- COMPONENT (Valor do component para o template)
 
 TEMPLATE ----> COMPONENT
   - (evento) = "handler"
-  - [(ngModel)] = "propriedade"
+
+TEMPLATE <----> COMPONENT (Bi-direcional)
+  - [(ngModel)] = "propriedade" - TWO WAY DATA BINDING
+    - Usa-se binding de eventos + propriedades
+
 
  */

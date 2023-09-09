@@ -1,0 +1,53 @@
+<section class="two-way-binding">
+  <article>
+    <h3>Two-way- data binding</h3>
+    <div>
+      <!--Para impementar o ngModel estamos:
+        1. usando o [property] binding para pegar a propriedade 'nome'
+           declarada no component.
+        2. Estamos usando o (event) binding para captar a entrada de dados
+           do campo input do template e setando na propriedade 'name'
+        3. Exibindo o resultado com uma {{ interpolação }}
+      -->
+
+      <input type="text"
+             [value]="nome"
+             (input)="nome = inputName.value"
+             #inputName> <br><br>
+      <!--
+         Neste exemplo estamos usando a propriedade value do input
+         e setando o valor através do evento de (input), para isso foi
+         preciso declarar um variavel local '#variavel' (que representa o conteudo digitado) e
+         então pegar o valor dela e setar na propriedade 'nome' vinda do component
+      -->
+
+      <input type="text"
+             [ngModel]="nome"
+             (ngModelChange)="nome = $event"
+      > <br><br>
+      <!--
+        Aqui já utilizamos a propriedade [ngModel] para pegar a propriedade 'nome'
+        do component e através do evento (ngModelChange) pegamos diretamente o valor
+        do conteudo digiatdo, pois o angualr somente necessita da declaração de $event
+        para conseguir captar o conteúdo.
+      -->
+
+      <!-- Forma simplicada no [(ngModel)] que segue a sintaxe "Banana na caixa [()]" -->
+      <input type="text" [(ngModel)] = "nome"><br><br>
+      <input type="text" bindon-ngModel = "nome"><br><br><!-- E o que o angular executa por debiaxo dos panos-->
+      <p>Você digitou: {{ nome }}</p><br><br>
+
+      <!-- ngModel representa um object/class e é uma diretiva que pertence ao FormsModel-->
+      <div>
+        <p>Meu nome é {{pessoa.nome }} tenho {{ pessoa.idade }} e moro em {{pessoa.end.cidade}}</p>
+        <input type="text" [(ngModel)] = 'pessoa.nome'><br><br>
+        <input type="text" [(ngModel)]="pessoa.idade"><br><br>
+        <input type="text" [(ngModel)]="pessoa.end.cidade"><br><br>
+        <input type="text" [(ngModel)]="pessoa.end.estado"><br><br>
+        <input type="text" [(ngModel)]="pessoa.end.cep"><br><br>
+
+      </div>
+
+    </div>
+  </article>
+</section>
