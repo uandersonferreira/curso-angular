@@ -45,4 +45,19 @@ seu aplicativo e organizar o código de forma mais clara e manutenível.
 Os módulos de funcionalidade são uma parte fundamental da arquitetura
 de um aplicativo Angular e ajudam a separar e isolar diferentes partes
 do código.
+
+declarations:
+  - E onde ficam todos: components, diretivas e pipes
+  que queremos utilizar no modulo.
+
+imports:
+  - E onde declaramos os outros módulos que desejamos utilizar ou
+  que são necessários para o funcionamento do módulo atual.
+
+providers:
+  - Os provedores são usados para configurar os serviços e
+  injeções de dependência em um módulo. Isso significa que você
+  declara quais serviços estarão disponíveis para injeção no escopo
+  do módulo.
+
  */
