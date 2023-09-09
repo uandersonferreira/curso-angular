@@ -1,0 +1,9 @@
+.p-destaque{
+  color: red;
+}
+
+div > ul{
+  display: flex;
+  flex-direction: row;
+  gap: 35px;
+}
