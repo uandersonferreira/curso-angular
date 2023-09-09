@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {CursosService} from "./cursos.service";
 
 @Component({
   selector: 'app-cursos',
@@ -7,18 +8,27 @@ import {Component, OnInit} from '@angular/core';
 })
 export class CursosComponent implements  OnInit{
   nomePortal: string;
-  cursos: string[] = ['Java', 'Ext JS', 'Angular']
+  cursos: string[];//Informações dinâmicas devem ser implementadas no service
 
-  constructor() {
+  constructor(private cursosService: CursosService) {
     this.nomePortal = 'http://loiane.training';
 
     // *ngFor por debaixo dos panos
-    for (let i=0; i<this.cursos.length; i++){
-      let curso = this.cursos[i];
-    }
+    // for (let i=0; i<this.cursos.length; i++){
+    //   let curso = this.cursos[i];
+    // }
+    // var servico = new CursosService();
+    this.cursos = this.cursosService.getCursos();
   }
 
   ngOnInit(): void {
   }
 }
-// {{ variavel }} -> Interpolação
+/*
+{{ variavel }} -> Interpolação
+
+INJENÇÃO DE DEPENDÊNCIA NO ANGULAR
+  - E feita via construtor
+
+
+ */
