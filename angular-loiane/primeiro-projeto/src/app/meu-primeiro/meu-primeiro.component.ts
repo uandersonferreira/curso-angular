@@ -6,6 +6,8 @@ import { Component } from "@angular/core";
   template: `
     <p>Meu primeiro component com angular! :) </p>
   `
+  //As boas práticas indica que se temos mais de 3 linhas de
+  //código devemos declarar um arquivo.html externo
 })
 export class MeuPrimeiroComponent{
 
