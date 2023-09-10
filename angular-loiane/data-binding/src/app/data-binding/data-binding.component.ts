@@ -14,6 +14,8 @@ export class DataBindingComponent implements OnInit{
   valorSalvo: string = ''
 
   isMouserOver: boolean = false;
+  nomeDoCurso: string = "Curso de Angular" //Variável que será passada/mapeada para a propriedade
+                                          // 'nome'( @Input() ) da tag <app-curso></app-curso>
 
   constructor() {}
   ngOnInit(): void {
