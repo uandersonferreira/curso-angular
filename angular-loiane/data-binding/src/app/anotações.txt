@@ -1,0 +1,5 @@
+COMO CRIAR COMPONENTS ?
+cd nomeProjeto
+ng generate component nome-component
+ng g c nome-component
+
