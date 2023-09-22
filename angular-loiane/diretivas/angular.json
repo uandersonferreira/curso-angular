@@ -95,6 +95,11 @@
       }
     }
   },
+  "schematics": {
+    "@schematics/angular:component": {
+      "style": "sass"
+    }
+  },
   "cli": {
     "analytics": "a1b75b2a-8c82-4bba-b347-7872447f0b0b"
   }
