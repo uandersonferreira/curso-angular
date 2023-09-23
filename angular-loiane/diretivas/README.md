@@ -28,4 +28,9 @@ COAMNDOS ANGULAR CLI DE VERIFICAÇÃO E TESTE
 - ng e2e: ng e2e é usado para realizar testes end-to-end (teste de integração) para verificar o comportamento geral do seu aplicativo
 
 
+### Dependencies x DevDependencies (package.json)
 
+- dependencies: dependências necessárias para executar a aplicação
+- DevDependencies: dependências necessárias paera 
+desenvolver a aplicação (não necessárias após o
+build de produção)
