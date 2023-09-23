@@ -1,1 +1,46 @@
-<p>diretiva-ngif works!</p>
+<h5>*ngIf</h5>
+
+<div *ngIf="cursos.length > 0">
+  Lista de Cursos aqui.
+</div>
+
+<div *ngIf="cursos.length == 0">
+ Não existem cursos para serem listados.
+</div>
+
+<div *ngIf="mostrarCursos">
+  Lista de Cursos aqui.
+</div>
+
+<div *ngIf="!mostrarCursos">
+  Não existem cursos para serem listados.
+</div>
+
+<br>
+<button (click)="onMostrarCursos()">Mostrar ou esconder cursos</button>
+
+<h5>hidden como alternativa ao *ngIF ao manipular elementos da DOM</h5>
+<div [hidden]="!mostrarCursos"> <!-- hidden = true | pois mostrarCurso e false por default-->
+  Lista de Cursos aqui.
+</div>
+
+<div [hidden]="mostrarCursos"><!-- hidden = false | pois mostrarCurso e false por default-->
+  Não existem cursos para serem listados.
+</div>
+
+<!--
+ [hidden] - Recomendado para árvore de
+ elementos pequenas.
+ (alguns campos de um formulário como exemplo)
+
+ *ngIf - recomendado para árvore de
+ elementos grandes.
+
+O [hidden] - É menos custoso usar caso o custo de criar a
+            árvore de elementos seja grande.
+            Mas deve ser analisado a questão da segurança,
+            já que o conteúdo estara somente escondido para o browser, mas
+            visivel no console.
+
+
+-->
