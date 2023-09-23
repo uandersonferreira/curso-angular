@@ -1,0 +1,41 @@
+<nav class="navbar  navbar-expand-lg bg-primary ">
+  <div class="nav navbar-nav ">
+    <a class="nav-item nav-link"
+       [class.active]="aba == 'home' "
+       (click)="aba = 'home'"
+    >
+      Home
+    </a>
+    <a class="nav-item nav-link"
+       [class.active]="aba == 'mapa' "
+       (click)="aba = 'mapa'"
+    >
+      Mapa
+    </a>
+    <a class="nav-item nav-link"
+       [class.active]="aba == 'lista' "
+       (click)="aba = 'lista'"
+    >
+      Lista
+    </a>
+  </div>
+</nav>
+
+<div class="container" [ngSwitch]="aba">
+  <p *ngSwitchCase=" 'mapa' ">Modo Mapa Ativado</p>
+  <p *ngSwitchCase=" 'lista' ">Modo Lista Ativado</p>
+  <p *ngSwitchDefault>Modo Home Ativado</p>
+</div>
+
+<!--
+ngSwitch é o nosso switch case do Java
+ngSwitchCase é os case do java
+ngSwitchDefault é o valor default do switch
+
+switch (expressão) {
+case valor1: faça isso
+case valor2: faça isso
+case valorN: faca isso...
+default: execute o valor padrão, caso não for nenhuma das anteriores
+}
+-->

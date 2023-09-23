@@ -7,14 +7,15 @@ import { DiretivaNgifComponent } from './diretiva-ngif/diretiva-ngif.component';
 import { TesteComponent } from './teste/teste.component';
 import { TesteLessComponent } from './teste-less/teste-less.component';
 import { TesteSassComponent } from './teste-sass/teste-sass.component';
-
+import { DiretivaNgswitchComponent } from './diretiva-ngswitch/diretiva-ngswitch.component';
 @NgModule({
   declarations: [
     AppComponent,
     DiretivaNgifComponent,
     TesteComponent,
     TesteLessComponent,
-    TesteSassComponent
+    TesteSassComponent,
+    DiretivaNgswitchComponent,
   ],
   imports: [
     BrowserModule,

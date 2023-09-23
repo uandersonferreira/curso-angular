@@ -11,3 +11,7 @@ d
 4angular-cli-libs-externos/src/app/app.component.html,2/8/28c1528ae013283f0f955443d9e8bfb75db2ef86
 V
 &angular-cli-libs-externos/angular.json,4/d/4daf13ea4e9a0adf339d8bfbc2cc36c7cfeb4bf8
+X
+(angular-cli-libs-externos/src/index.html,5/3/533b3e7387090d20f8406741146a55092458b384
+c
+3angular-cli-libs-externos/src/app/app.component.css,d/f/df5d72650b42b8277b6be62a7fd3d5fc247214f9
