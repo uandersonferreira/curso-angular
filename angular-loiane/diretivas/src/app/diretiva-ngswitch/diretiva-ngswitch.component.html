@@ -27,6 +27,24 @@
   <p *ngSwitchDefault>Modo Home Ativado</p>
 </div>
 
+<br><hr>
+<h5>Removendo o * e usando ng-template</h5>
+<div class="container" [ngSwitch]="aba"  >
+  <ng-template [ngSwitchCase]="'mapa'"> <!-- []="" (property binding) -->
+    <p>Modo Mapa ativado</p>
+  </ng-template>
+
+  <ng-template [ngSwitchCase]="'lista'"><!-- []="" (property binding) -->
+    <p>Modo Lista ativado</p>
+  </ng-template>
+
+  <ng-template [ngSwitchCase]="'home'" ngSwitchDefault><!-- []="" (property binding) -->
+    <p>Home</p>
+  </ng-template>
+<!--  Podemos utilizar o ngSwitchCase junto com ngSwitchDefault no template-->
+</div>
+
+
 <!--
 ngSwitch é o nosso switch case do Java
 ngSwitchCase é os case do java

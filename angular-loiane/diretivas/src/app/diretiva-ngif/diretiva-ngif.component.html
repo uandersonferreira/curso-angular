@@ -1,24 +1,23 @@
 <h5>*ngIf</h5>
 
-<div *ngIf="cursos.length > 0">
-  Lista de Cursos aqui.
+<div *ngIf="cursos.length > 0" >
+  Lista de cursos aqui.
+</div>
+<div *ngIf="cursos.length == 0" >
+  Não existem cursos para serem listados.
 </div>
 
-<div *ngIf="cursos.length == 0">
- Não existem cursos para serem listados.
+<div *ngIf="mostrarCursos" >
+  Lista de cursos aqui.
 </div>
-
-<div *ngIf="mostrarCursos">
-  Lista de Cursos aqui.
-</div>
-
-<div *ngIf="!mostrarCursos">
+<div *ngIf="!mostrarCursos" >
   Não existem cursos para serem listados.
 </div>
 
 <br>
 <button (click)="onMostrarCursos()">Mostrar ou esconder cursos</button>
 
+<br><hr>
 <h5>hidden como alternativa ao *ngIF ao manipular elementos da DOM</h5>
 <div [hidden]="!mostrarCursos"> <!-- hidden = true | pois mostrarCurso e false por default-->
   Lista de Cursos aqui.
@@ -27,6 +26,14 @@
 <div [hidden]="mostrarCursos"><!-- hidden = false | pois mostrarCurso e false por default-->
   Não existem cursos para serem listados.
 </div>
+
+<br><hr>
+<h5>Removendo o * e usando ng-template</h5>
+
+<ng-template [ngIf]="mostrarCursos"><!-- []="" (property binding) -->
+  <div>Lista de Cursos aqui.</div>
+</ng-template>
+
 
 <!--
  [hidden] - Recomendado para árvore de
@@ -41,6 +48,4 @@ O [hidden] - É menos custoso usar caso o custo de criar a
             Mas deve ser analisado a questão da segurança,
             já que o conteúdo estara somente escondido para o browser, mas
             visivel no console.
-
-
 -->

@@ -2,12 +2,12 @@
 
 <ul>
   <li *ngFor="let curso of cursos">
-    {{ curso }}
+    {{ curso }} <!-- Interpolação {{ }} -->
   </li>
 </ul>
 <hr>
 
-<p>Utilizando ngFor com index</p>
+<h5>Utilizando ngFor com index</h5>
 
 <ul>
   <li *ngFor="let curso of cursos, let i = index">
@@ -15,4 +15,11 @@
   </li>
 </ul>
 
-
+<h5>Removendo o * e usando ng-template com index</h5>
+<ul>
+  <ng-template ngFor [ngForOf]="cursos" let-curso let-i="index"><!-- []="" (property binding) -->
+    <li>
+      {{ i+1 }} - {{ curso }}
+    </li>
+  </ng-template>
+</ul>
