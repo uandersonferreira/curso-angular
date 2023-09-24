@@ -9,6 +9,7 @@ import { TesteLessComponent } from './teste-less/teste-less.component';
 import { TesteSassComponent } from './teste-sass/teste-sass.component';
 import { DiretivaNgswitchComponent } from './diretiva-ngswitch/diretiva-ngswitch.component';
 import { DiretivaNgForComponent } from './diretiva-ng-for/diretiva-ng-for.component';
+import { DiretivaNgclassComponent } from './diretiva-ngclass/diretiva-ngclass.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,6 +19,7 @@ import { DiretivaNgForComponent } from './diretiva-ng-for/diretiva-ng-for.compon
     TesteSassComponent,
     DiretivaNgswitchComponent,
     DiretivaNgForComponent,
+    DiretivaNgclassComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,28 @@
+<h1>
+  <i class="bi"
+     [class.bi-star]="!meuFavorito"
+     [class.bi-star-fill]="meuFavorito"
+     (click)="onClickMeuFavorito()"
+  >
+  </i>
+</h1>
+
+<h5>Utilizando ngClass</h5>
+
+<h1>
+  <i class="bi"
+     [ngClass]="{
+     'bi-star' : !meuFavorito,
+     'bi-star-fill' : meuFavorito
+     }"
+     (click)="onClickMeuFavorito()"
+  >
+  </i>
+</h1>
+
+<!--
+  A nível de escalabilidade e legibilidade
+  o ngClass deve ser utilizado, assim fica
+  mais fácil trocar a lógica para aplicar
+  os styles.
+-->
