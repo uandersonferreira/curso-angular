@@ -1,0 +1,18 @@
+<p> Descrição: {{ tarefa.desc }} </p>
+<!--<p> Responsável: {{ tarefa.responsavel.nome }} </p>-->
+<p>
+  Responsável:
+  {{ tarefa.responsavel != null ? tarefa.responsavel.nome : null }}
+</p>
+
+<p> Responsável: {{ tarefa.responsavel?.nome }} </p>
+<p> Responsável: {{ tarefa.responsavel?.usuario?.nome }} </p>
+<!--
+O OPERADOR ELVIS VALIDA SE A VARIAVEL
+É NULL OU SE EXISTE/DECLARADA, BASICAMENTE FAZ ISSO AQUI:
+tarefa.responsavel != null ? tarefa.responsavel.nome : null
+
+UTIL QUANDO TEMOS OBJETOS DENTRO DE OUTROS OBJETOS
+PARA PODE EVITAR UM 'Cannot read property 'nome' of null'
+
+-->
