@@ -2,6 +2,8 @@ import {Directive, ElementRef, Renderer2} from '@angular/core';
 
 @Directive({
   selector: '[appFundoAmarelo]'
+  // selector: 'p[appFundoAmarelo]' Restrigindo a funcionalidade para somente elemento(tag) do tipo
+  //   especificado.
 })
 export class FundoAmareloDirective {
 
@@ -9,7 +11,7 @@ export class FundoAmareloDirective {
     //console.log(_elementRef)
     // this._elementRef.nativeElement.style.backgroundColor = 'yellow';
     this._renderer.setStyle(
-      this._elementRef.nativeElement,
+      this._elementRef.nativeElement,//acesso a tag html de forma nativa
       'background-color',
       'yellow'
     );
@@ -44,7 +46,17 @@ export class FundoAmareloDirective {
     Isso permite que você adicione lógica específica para manipular
     os elementos DOM aos quais a diretiva é aplicada.
 
-Em resumo, o @Directive é usado para criar diretivas personalizadas em Angular. Ele define o comportamento, o seletor e o escopo de uma diretiva e fornece um local para adicionar lógica personalizada que será executada quando a diretiva é aplicada a elementos HTML correspondentes em seus templates Angular.
+    Ao usar @Directive, você pode criar suas próprias diretivas
+personalizadas para manipular o DOM (Documento Object Model) de
+maneira programática, interagir com elementos HTML, adicionar
+comportamentos específicos ou modificar a aparência de elementos,
+entre outras coisas.
+
+Em resumo, o @Directive é usado para criar diretivas personalizadas
+em Angular. Ele define o comportamento, o seletor e o escopo de uma
+diretiva e fornece um local para adicionar lógica personalizada que
+será executada quando a diretiva é aplicada a elementos HTML
+ correspondentes em seus templates Angular.
 
 
 ElementRef - Indica a Referência do elemento (tag) html
@@ -53,9 +65,17 @@ ElementRef - Indica a Referência do elemento (tag) html
   especificado.
 
 
-
 DICA: QUANDO NÃO SABEMOS A PROPRIEDADE, QUE QUEREMOS ALTERAR
 FAÇA UM CONSOLE.LOG PARA DESCOBRIR.
+
+Em resumo:
+- ElementRef fornece acesso direto ao elemento DOM.
+- Renderer2 fornece uma camada de abstração segura e
+independente da plataforma para manipular o DOM.
+
+Embora ElementRef possa ser útil em casos simples e diretos,
+Renderer2 é a escolha mais segura e recomendada para a maioria
+das operações de manipulação do DOM em aplicativos Angular
 
  */
 
