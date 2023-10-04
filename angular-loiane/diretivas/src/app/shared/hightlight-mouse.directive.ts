@@ -36,6 +36,22 @@ export class HightlightMouseDirective {
     // private _elementRef: ElementRef,
     // private _renderer: Renderer2
   ) {}
+<<<<<<< HEAD
+=======
+  /*
+  Operador ( ! ) de exclamação:
+
+  let nome: string | null = getNome(); // Suponhamos que getNome() pode retornar null.
+
+  // Sem o operador !, você receberia um erro:
+  // error TS2533: Object is possibly 'null' or 'undefined'.
+  console.log(nome.length);
+
+  // Com o operador !, você informa ao TypeScript que você tem certeza de que nome não é nulo:
+  console.log(nome!.length); // Nenhum erro será emitido aqui.
+
+   */
+>>>>>>> c9925a4 ( Diretivas: HostListener e HostBinding)
 
 }
 /*
