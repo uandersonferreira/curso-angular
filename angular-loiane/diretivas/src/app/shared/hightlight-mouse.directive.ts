@@ -36,8 +36,7 @@ export class HightlightMouseDirective {
     // private _elementRef: ElementRef,
     // private _renderer: Renderer2
   ) {}
-<<<<<<< HEAD
-=======
+
   /*
   Operador ( ! ) de exclamação:
 
@@ -51,7 +50,6 @@ export class HightlightMouseDirective {
   console.log(nome!.length); // Nenhum erro será emitido aqui.
 
    */
->>>>>>> c9925a4 ( Diretivas: HostListener e HostBinding)
 
 }
 /*
