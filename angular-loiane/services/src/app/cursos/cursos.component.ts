@@ -7,12 +7,13 @@ import {CursosService} from "./cursos.service";
   styleUrls: ['./cursos.component.css']
 })
 export class CursosComponent implements OnInit{
-  cursosServices: CursosService;
+  // cursosServices: CursosService;
 
   cursos: string[] = [];
 
-  constructor() {
-    this.cursosServices = new CursosService();
+  constructor(private cursosServices: CursosService) {
+    // this.cursosServices = new CursosService();
+    // this.cursosServices = _cursosServices;
   }
   ngOnInit(): void {
     this.cursos = this.cursosServices.getCursos();
